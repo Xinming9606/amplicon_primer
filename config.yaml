@@ -1,0 +1,16 @@
+gene: tuf
+### housekeeping gene that potentially works as a phylogenetic discriminator
+genera: 147802 
+### genera that aim to design primers
+domain: bacteria
+### domain that aim to 
+primer_len: 18
+### length for finding potential primers
+amplicon_max: 600
+### max amplicon length
+amplicon_min: 300
+### min amplicon length
+div_cut: 0
+### initial diversity cutoff to start out with
+GC_tol: 0.2
+### max difference in GC%
