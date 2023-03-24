@@ -7,6 +7,5 @@ dependencies:
   - snakemake=6.15.5
   - ripgrep=13.0.0
   - pip
-  - pip:
-    - ncbi-genome-download
+  - ncbi-genome-download
   - r-base
