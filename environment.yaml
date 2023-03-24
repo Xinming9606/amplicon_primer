@@ -1,0 +1,12 @@
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - vsearch=2.22.1
+  - muscle=5.1
+  - snakemake=6.15.5
+  - ripgrep=13.0.0
+  - pip
+  - pip:
+    - ncbi-genome-download
+  - r-base
