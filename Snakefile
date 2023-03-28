@@ -46,9 +46,15 @@ rule sequence_extract:
         gene=str(config["gene"])
     shell:
         """
+        set +e
         for gcf_file in {input}/*.fna; do
             for gene in {params.gene}; do
-                cat "$gcf_file" | rg -U ">lcl.+gene={params.gene}.+[\w\n]+" >> {output}
+                res=$(cat "$gcf_file" | rg -U ">lcl.+gene={params.gene}.+[\w\n]+")
+                if [ "$res" != "" ]; then
+                echo "$res" >> {output}
+                else
+                echo "no {params.gene}" >&2
+            fi
             done
         done
         """
